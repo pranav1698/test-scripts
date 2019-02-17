@@ -2,8 +2,11 @@
 set -e
 
 query='{"package_chromium": "chromium", "package_gimp": "gimp"}'
-response=`echo $query | jq '.[]'`
+response=`echo $query | jq -r '.[]'`
 for PACKAGE in $response
 do
-    echo $PACKAGE
+    if [ $PACKAGE == "chromium" ]
+    then
+        echo "hello"
+    fi
 done
