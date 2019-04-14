@@ -1,6 +1,6 @@
 #!/bin/bash
 
 echo "hello"
-silly speaker beep
+set bell-style none
 silly speaker beep
 blacklist pcspkr
